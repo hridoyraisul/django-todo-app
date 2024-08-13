@@ -1,0 +1,61 @@
+{% extends "todoapp/layouts/base.html" %}
+{% block title %}
+ About Us
+{% endblock %}
+{% block content %}
+ <!--To-Do List-->
+     <!-- Hero Section -->
+    <header class="hero-section text-center bg-dark text-light">
+        <div class="container">
+            <h1 class="display-4 ">About Us</h1>
+            <p class="lead p-5">Learn more about our Todo App and the team behind it.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5 text-light">
+        <section id="introduction">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Introduction</h2>
+                    <p>Welcome to Todo App! Our app is designed to help you stay organized and manage your tasks efficiently. With a user-friendly interface and robust features, you can easily keep track of your to-dos and boost your productivity.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://s3-us-east-2.amazonaws.com/static.showingtime.com/wp-content/uploads/2018/06/TaskList-795x675.jpg" class="img-fluid" alt="Todo App Screenshot">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="my-5">
+            <h2>Features</h2>
+            <ul>
+                <li>Easy task creation and management</li>
+                <li>Customizable task categories</li>
+                <li>Reminders and notifications</li>
+                <li>Progress tracking and analytics</li>
+                <li>Collaborative task sharing</li>
+            </ul>
+        </section>
+
+        <section id="team" class="my-5">
+            <h2>Meet the Team</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Team Member 1">
+                    <h5>John Doe</h5>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Team Member 2">
+                    <h5>Jane Smith</h5>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Team Member 3">
+                    <h5>Emily Johnson</h5>
+                    <p>Product Manager</p>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
