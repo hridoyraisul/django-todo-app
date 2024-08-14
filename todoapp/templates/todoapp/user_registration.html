@@ -1,0 +1,54 @@
+{% extends "todoapp/layouts/base.html" %}
+
+{% block title %}
+ User Registration
+{% endblock %}
+{% block content %}
+ <!--To-Do List-->
+    <div class="container my-4 bg-dark text-light rounded-3">
+        <h1 class="text-center mb-2">Register New User</h1>
+        <hr>
+
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <div class="mb-2">
+            <form action="{% url 'userRegistration' %}" method="post">
+                {% csrf_token %}
+
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Jon Doe">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                    <input type="password"  name="confirm_password" class="form-control" id="exampleFormControlInput1" placeholder="Re-type Password">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox"  name="agree" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="btn btn-outline-light">Register</button>
+
+            </form>
+        </div>
+        
+        <br>
+
+            
+        
+        
+    </div>
+{% endblock %}
