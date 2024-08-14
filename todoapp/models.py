@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django.utils import timezone
+
 class Todo(models.Model):
     category_id = models.IntegerField(null=True,blank=True)
     text = models.CharField(max_length=300)

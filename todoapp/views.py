@@ -61,10 +61,9 @@ def userRegistration(request):
 
 def userLogin(request):
     if request.method == 'POST':
-        email = request.POST.get('email').strip()
-        password = request.POST.get('password').strip()
-
         try:
+            email = request.POST.get('email').strip()
+            password = request.POST.get('password').strip()
             user = User.objects.get(email=email)
 
             if not user.is_active:
