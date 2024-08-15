@@ -43,3 +43,14 @@ python3 manage.py migrate
 ```
 python3 manage.py createsuperuser
 ```
+
+## Development Mode:
+
+```
+python3 manage.py runserver
+```
+
+## Production Mode:
+```
+
+```

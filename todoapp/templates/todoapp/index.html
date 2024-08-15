@@ -3,7 +3,22 @@
 {% block title %}
  Home page
 {% endblock %}
+
+
+{% comment %} {% block headscripts %}
+    {% load static %}
+    <!-- Link to Vite generated CSS -->
+    <link rel="stylesheet" href="{% static 'assets/index.css' %}">
+{% endblock %}
+
+{% block bodyscripts %}
+<script type="module" src="{% static 'assets/index.js' %}"></script>
+{% endblock %} {% endcomment %}
+
 {% block content %}
+<!-- Frontend Test-->
+ <div id="app"></div>
+
  <!--To-Do List-->
     <div class="container my-4 bg-dark text-light rounded-3">
         <h1 class="text-center mb-2">To-Do List</h1>
@@ -17,6 +32,11 @@
                     <button class="btn btn-outline-light" type="submit" id="button-addon2">✅</button>
                 </div>
             </form>
+            {% if form.text.errors %}
+                <div class="text-light rounded-pill bg-danger mt-1">
+                    {{ form.text.errors }}
+                </div>
+            {% endif %}
         </div>
 
         <div class="my-5">

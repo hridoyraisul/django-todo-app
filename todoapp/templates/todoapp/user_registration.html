@@ -23,24 +23,46 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Full Name</label>
                     <input type="text" name="name" class="form-control" placeholder="Jon Doe">
+                    {% if form.name.errors %}
+                        <div class="text-light rounded-pill bg-danger mt-1">
+                            {{ form.name.errors }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    {% if form.email.errors %}
+                        <div class="text-light rounded-pill bg-danger mt-1">
+                            {{ form.email.errors }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                    {% if form.password.errors %}
+                        <div class="text-light rounded-pill bg-danger mt-1">
+                            {{ form.password.errors }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
                     <input type="password"  name="confirm_password" class="form-control" id="exampleFormControlInput1" placeholder="Re-type Password">
+                    {% if form.confirm_password.errors %}
+                        <div class="text-light rounded-pill bg-danger mt-1">
+                            {{ form.confirm_password.errors }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox"  name="agree" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
                 </div>
                 <button type="submit" class="btn btn-outline-light">Register</button>
+
+                <p class="text-center mt-3">Already have an account? <a style="text-decoration:none;" class="text-info fw-bold" href="{% url 'userLogin' %}">Login now</a></p>
 
             </form>
         </div>

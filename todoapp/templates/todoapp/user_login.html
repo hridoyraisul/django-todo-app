@@ -22,16 +22,28 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    {% if form.email.errors %}
+                        <div class="text-light rounded-pill bg-danger mt-1">
+                            {{ form.email.errors }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                    {% if form.password.errors %}
+                        <div class="text-light rounded-pill bg-danger mt-1">
+                            {{ form.password.errors }}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox"  name="agree" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Keep logged in</label>
                 </div>
                 <button type="submit" class="btn btn-outline-light">Login</button>
+
+                <p class="text-center mt-3">Don't have an account? <a style="text-decoration:none;" class="text-info fw-bold" href="{% url 'userRegistration' %}">Register now</a></p>
 
             </form>
         </div>
