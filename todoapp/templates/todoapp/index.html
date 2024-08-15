@@ -1,19 +1,15 @@
 {% extends "todoapp/layouts/base.html" %}
-
 {% block title %}
  Home page
 {% endblock %}
 
-
-{% comment %} {% block headscripts %}
-    {% load static %}
-    <!-- Link to Vite generated CSS -->
-    <link rel="stylesheet" href="{% static 'assets/index.css' %}">
+{% block headscripts %}
+{% load static %}
 {% endblock %}
 
 {% block bodyscripts %}
-<script type="module" src="{% static 'assets/index.js' %}"></script>
-{% endblock %} {% endcomment %}
+    <script type="module" src="{% static "src/main.js" %}"></script>
+{% endblock %}
 
 {% block content %}
 <!-- Frontend Test-->
@@ -55,4 +51,6 @@
         
         
     </div>
+
+
 {% endblock %}
